@@ -2,30 +2,23 @@
 //
 
 #include <iostream>
-int a{ 5 };
 
-// Function that requests three numbers to be entered by a user.
-// Numbers that the user enters will then be displayed on the console.
-int main()
+void doNothing(int&) // Don't worry about what & is for now, we're just using it to trick the compiler into thinking variable x is used
 {
-    int x{ 5 };
-    int y{};
 
-    std::cout << "Hello World!\n";                                          // new line without flushing the buffer
-    std::cout << "My integer x is currently " << x << "." << std::endl;     // new line with manual flush - I am done here so this makes sense
-    std::cout << "Now it's your turn to enter numbers:\n";
-    std::cin >> x;
-    std::cin >> y;                                                          // the user can enter these in one line seperated by a space or in two enter commands
-    std::cout << "You entered the numbers " << x << " and " << y << "!\n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+int main()
+{
+	int x;			// uninitialized variable
+
+	doNothing(x);
+	std::cout << x << '\n';	// expect this to print something unpredictable to the console. It's converting whatever was in that RAM slot to an integer!
+
+	std::cout << sizeof(int) << '\n'; // on my platform this produces 4, on some platforms 2. This is an example of implementation defined behaviour to avoid.
+
+	return 0;
+}
+
+
