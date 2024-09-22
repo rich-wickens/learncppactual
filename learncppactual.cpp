@@ -3,8 +3,15 @@
 
 #include <iostream>
 
+int doubleNumber(int x) 
+{
+	x = x * 2;
+	return x;
+}
+
 int main()
 {
-	
+	std::cout << doubleNumber(2);
+
 	return 0;
 }
