@@ -11,7 +11,10 @@ int doubleNumber(int x)
 
 int main()
 {
-	std::cout << doubleNumber(2);
+	std::cout << "Enter a number to be doubled: ";
+	int a;
+	std::cin >> a;
+	std::cout << doubleNumber(a);
 
 	return 0;
 }
