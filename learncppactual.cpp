@@ -4,9 +4,8 @@
 #include <iostream>
 
 int doubleNumber(int x) 
-{
-	x = x * 2;
-	return x;
+{;
+	return 2 * x;
 }
 
 int main()
@@ -14,7 +13,7 @@ int main()
 	std::cout << "Enter a number to be doubled: ";
 	int a;
 	std::cin >> a;
-	std::cout << doubleNumber(a);
+	std::cout << doubleNumber(a) << '\n';
 
 	return 0;
 }
