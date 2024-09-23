@@ -1,11 +1,4 @@
-// learncppactual.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
-
-int readNumber();
-void writeAnswer(int x);
-
+#include "io.h"
 
 int main()
 {
