@@ -3,29 +3,14 @@
 
 #include <iostream>
 
-int readNumber()
-{
-	int x{};
-	std::cout << "Enter a number to add: ";
-	std::cin >> x;
+int readNumber();
+void writeAnswer(int x);
 
-	return x;
-}
-
-void writeAnswer(int x)
-{
-	std::cout << "The answer is " << x;
-}
 
 int main()
 {
-	int y{};
-	int x{};
-
-	x = readNumber();
-	y = readNumber();
-
+	int y{readNumber()};
+	int x{readNumber()};
 	writeAnswer(x + y);
-	
 	return 0;
 }
