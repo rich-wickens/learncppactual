@@ -4,6 +4,8 @@
 
 int main()
 {
+	plog::init(plog::debug, "Logfile.txt");
+
 	PLOGD << "main() called";
 	
 	return 0;
